@@ -1,0 +1,51 @@
+{% macro login(action = "#", email = null) %}
+  {% import "button.php.twig" as button %}
+  {% import "input.php.twig" as input %}
+
+  <form action="{{ action }}" method="post">
+    <div class="form-group">
+      {{ input.label('Email', 'email_id') }}
+      {{ input.email('email', email, true, 'email_id') }}
+    </div>
+    <div class="form-group">
+      {{ input.label('Password', 'password_id') }}
+      {{ input.password('password', true, 'password_id') }}
+    </div>
+    {{ button.input('btn-primary', 'Login', 'submit') }}
+  </form>
+{% endmacro %}
+
+{% macro register(action = "#", email = null) %}
+  {% import "button.php.twig" as button %}
+  {% import "input.php.twig" as input %}
+
+  <form action="{{ action }}" method="post">
+    <div class="form-group">
+      {{ input.label('Email', 'email_id') }}
+      {{ input.email('email', email, true, 'email_id') }}
+    </div>
+    <div class="form-group">
+      {{ input.label('Password', 'password_id') }}
+      {{ input.password('password', true, 'password_id') }}
+    </div>
+    <div class="form-group">
+      {{ input.label('Repeat password', 'repeat_password_id') }}
+      {{ input.password('repeat_password', true, 'repeat_password_id') }}
+    </div>
+    {{ button.input('btn-primary', 'Register', 'submit') }}
+  </form>
+{% endmacro %}
+
+{% macro search(action = "#", keyword = null, label, buttonValue) %}
+  {% import "button.php.twig" as button %}
+  {% import "input.php.twig" as input %}
+
+  <form action="{{ action }}" method="get">
+    <div class="form-group">
+        {{ input.label('Search') }}
+        {{ input.text('search', keyword, true, null) }}
+    </div>
+
+    {{ button.button('btn-primary', buttonValue) }}
+  </form>
+{% endmacro %}

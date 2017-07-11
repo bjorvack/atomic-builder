@@ -1,0 +1,11 @@
+{% macro button(class, value, type = 'submit') %}
+  <button class="btn {{ class }}" type="{{ type }}">{{ value|raw }}</button>
+{% endmacro %}
+
+{% macro input(class, value, type = 'submit') %}
+  <input class="btn {{ class }}"  type="{{ type }}" value="{{ value }}">
+{% endmacro %}
+
+{% macro link(class, value, target = '#') %}
+  <a href="{{ target }}" class="btn {{ class }}">{{ value|raw }}</a>
+{% endmacro %}

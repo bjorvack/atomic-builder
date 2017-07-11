@@ -1,0 +1,15 @@
+{
+    "name": "bjorvack/atomic-builder",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Bjorn",
+            "email": "bjorn@sumocoders.be"
+        }
+    ],
+    "minimum-stability": "stable",
+    "require": {
+        "twig/twig": "~2.0",
+        "twbs/bootstrap-sass": "^3.3"
+    }
+}

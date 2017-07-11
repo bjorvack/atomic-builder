@@ -1,0 +1,24 @@
+{% macro article(image, title, description, readMore) %}
+  <article class="panel panel-primary">
+    <div class="row">
+      <div class="col-md-12">
+        <a href="{{ readMore }}">
+          <img class="img-responsive" src="{{ image }}" alt="{{ title }}">
+        </a>
+      </div>
+    </div>
+    <div class="panel-body">
+      <div class="row">
+        <div class="col-md-12">
+          <h1>{{ title }}</h1>
+          <p>
+            {{ description }}
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="panel-footer">
+      <a href="{{ readMore }}">Read more</a>
+    </div>
+  </article>
+{% endmacro %}

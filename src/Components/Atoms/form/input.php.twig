@@ -1,0 +1,51 @@
+{% macro text(name, value, required = false, id = null) %}
+  <input type="text"
+         class="form-control"
+         name="{{ name }}"
+         value="{{ value }}"
+         {% if required %} required {% endif %}
+         {% if id %} id="{{ id }}" {% endif %}
+  >
+{% endmacro %}
+
+{% macro email(name, value, required = false, id = null) %}
+  <input type="email"
+         class="form-control"
+         name="{{ name }}"
+         value="{{ value }}"
+         {% if required %} required {% endif %}
+         {% if id %} id="{{ id }}" {% endif %}
+  >
+{% endmacro %}
+
+{% macro tel(name, value, required = false, id = null) %}
+  <input type="tel"
+         class="form-control"
+         name="{{ name }}"
+         value="{{ value }}"
+         {% if required %} required {% endif %}
+         {% if id %} id="{{ id }}" {% endif %}
+  >
+{% endmacro %}
+
+{% macro password(name, required = false, id = null) %}
+  <input type="password"
+         class="form-control"
+         name="{{ name }}"
+         {% if required %} required {% endif %}
+         {% if id %} id="{{ id }}" {% endif %}
+  >
+{% endmacro %}
+
+{% macro textarea(name, value, required = false, id = null) %}
+  <textarea
+          class="form-control"
+          name="{{ name }}"
+          {% if required %} required {% endif %}
+          {% if id %} id="{{ id }}" {% endif %}
+  >{{ value }}</textarea>
+{% endmacro %}
+
+{% macro label(name, for) %}
+  <label for="{{ for }}">{{ name }}</label>
+{% endmacro %}
