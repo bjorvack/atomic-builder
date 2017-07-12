@@ -11,5 +11,10 @@
     "require": {
         "twig/twig": "~2.0",
         "twbs/bootstrap-sass": "^3.3"
+    },
+    "autoload": {
+        "psr-4": {
+            "Bjorvack\\AtomicBuilder\\": "src/"
+        }
     }
 }

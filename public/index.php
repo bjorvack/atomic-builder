@@ -1,5 +1,7 @@
 <?php
 
+use Bjorvack\AtomicBuilder\Twig\TwigMacroLoader;
+
 require_once '../vendor/autoload.php';
 
 $directories = [];
@@ -22,10 +24,8 @@ $loader = new Twig_Loader_Filesystem(
 $twig = new Twig_Environment($loader, ['debug' => true]);
 $twig->addExtension(new Twig_Extension_Debug());
 
-$loader->addPath('../Macro');
-
-$secondaryTwig = new Twig_Environment($loader);
-
-$twig->addGlobal('macro', $secondaryTwig->render('macro.php.twig'));
+$twig->addExtension(
+    new TwigMacroLoader("../src/Components")
+);
 
 echo $twig->render('index.php.twig', []);

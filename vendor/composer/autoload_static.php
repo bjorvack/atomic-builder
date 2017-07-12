@@ -19,6 +19,10 @@ class ComposerStaticInit82a7b7a53e645fee96a3c2760dc1dbb8
         array (
             'Symfony\\Polyfill\\Mbstring\\' => 26,
         ),
+        'B' => 
+        array (
+            'Bjorvack\\AtomicBuilder\\' => 23,
+        ),
     );
 
     public static $prefixDirsPsr4 = array (
@@ -29,6 +33,10 @@ class ComposerStaticInit82a7b7a53e645fee96a3c2760dc1dbb8
         'Symfony\\Polyfill\\Mbstring\\' => 
         array (
             0 => __DIR__ . '/..' . '/symfony/polyfill-mbstring',
+        ),
+        'Bjorvack\\AtomicBuilder\\' => 
+        array (
+            0 => __DIR__ . '/../..' . '/src',
         ),
     );
 

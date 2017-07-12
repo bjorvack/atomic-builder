@@ -2,14 +2,14 @@
 
 {% block body %}
   <pre>
-    {{ dump(macro) }}
+    {{ dump(macro_button_button(), button, this) }}
 </pre>
 
   <section class="buttons">
     <h1>Buttons</h1>
-    <pre>{% verbatim %}{{ button.button('btn-default', 'button', 'submit') }}
-{{ button.input('btn-default', 'button', 'submit') }}
-{{ button.link('btn-default', 'button', '#') }}{% endverbatim %}</pre>
+    <pre>{% verbatim %}{{ macro_button_button('btn-default', 'button', 'submit') }}
+{{ macro_button_input('btn-default', 'button', 'submit') }}
+{{ macro_button_link('btn-default', 'button', '#') }}{% endverbatim %}</pre>
     <div class="row">
       <div class="col-md-12">
         <table class="table table-responsive table-striped">
@@ -25,85 +25,85 @@
             <tr>
               <td>btn-default</td>
               <td>
-                {{ button.button('btn-default', 'button') }}
+                {{ macro_button_button('btn-default', 'button') }}
               </td>
               <td>
-                {{ button.input('btn-default', 'button') }}
+                {{ macro_button_input('btn-default', 'button') }}
               </td>
               <td>
-                {{ button.link('btn-default', 'button') }}
+                {{ macro_button_link('btn-default', 'button') }}
               </td>
             </tr>
             <tr>
               <td>btn-primary</td>
               <td>
-                {{ button.button('btn-primary', 'button') }}
+                {{ macro_button_button('btn-primary', 'button') }}
               </td>
               <td>
-                {{ button.input('btn-primary', 'button') }}
+                {{ macro_button_input('btn-primary', 'button') }}
               </td>
               <td>
-                {{ button.link('btn-primary', 'button') }}
+                {{ macro_button_link('btn-primary', 'button') }}
               </td>
             </tr>
             <tr>
               <td>btn-success</td>
               <td>
-                {{ button.button('btn-success', 'button') }}
+                {{ macro_button_button('btn-success', 'button') }}
               </td>
               <td>
-                {{ button.input('btn-success', 'button') }}
+                {{ macro_button_input('btn-success', 'button') }}
               </td>
               <td>
-                {{ button.link('btn-success', 'button') }}
+                {{ macro_button_link('btn-success', 'button') }}
               </td>
             </tr>
             <tr>
               <td>btn-warning</td>
               <td>
-                {{ button.button('btn-warning', 'button') }}
+                {{ macro_button_button('btn-warning', 'button') }}
               </td>
               <td>
-                {{ button.input('btn-warning', 'button') }}
+                {{ macro_button_input('btn-warning', 'button') }}
               </td>
               <td>
-                {{ button.link('btn-warning', 'button') }}
+                {{ macro_button_link('btn-warning', 'button') }}
               </td>
             </tr>
             <tr>
               <td>btn-info</td>
               <td>
-                {{ button.button('btn-info', 'button') }}
+                {{ macro_button_button('btn-info', 'button') }}
               </td>
               <td>
-                {{ button.input('btn-info', 'button') }}
+                {{ macro_button_input('btn-info', 'button') }}
               </td>
               <td>
-                {{ button.link('btn-info', 'button') }}
+                {{ macro_button_link('btn-info', 'button') }}
               </td>
             </tr>
             <tr>
               <td>btn-danger</td>
               <td>
-                {{ button.button('btn-danger', 'button') }}
+                {{ macro_button_button('btn-danger', 'button') }}
               </td>
               <td>
-                {{ button.input('btn-danger', 'button') }}
+                {{ macro_button_input('btn-danger', 'button') }}
               </td>
               <td>
-                {{ button.link('btn-danger', 'button') }}
+                {{ macro_button_link('btn-danger', 'button') }}
               </td>
             </tr>
             <tr>
               <td>btn-link</td>
               <td>
-                {{ button.button('btn-link', 'button') }}
+                {{ macro_button_button('btn-link', 'button') }}
               </td>
               <td>
-                {{ button.input('btn-link', 'button') }}
+                {{ macro_button_input('btn-link', 'button') }}
               </td>
               <td>
-                {{ button.link('btn-link', 'button') }}
+                {{ macro_button_link('btn-link', 'button') }}
               </td>
             </tr>
           </tbody>
@@ -114,11 +114,11 @@
   <hr>
   <section class="input">
     <h1>Input</h1>
-    <pre>{% verbatim %}{{ input.label('Label', 'text_id') }}
-{{ input.text('text', 'value', true, 'text_id') }}
-{{ input.email('email', 'accounts@sumocoders.be', true, 'email_id') }}
-{{ input.tel('tel', '093950251', true, 'tel_id') }}
-{{ input.textarea('textarea', 'Lorem ipsum dolor sit amet, consectetur adipisicing elit.', true, 'textarea_id') }}{% endverbatim %}</pre>
+    <pre>{% verbatim %}{{ macro_input_label('Label', 'text_id') }}
+{{ macro_input_text('text', 'value', true, 'text_id') }}
+{{ macro_input_email('email', 'accounts@sumocoders.be', true, 'email_id') }}
+{{ macro_input_tel('tel', '093950251', true, 'tel_id') }}
+{{ macro_input_textarea('textarea', 'Lorem ipsum dolor sit amet, consectetur adipisicing elit.', true, 'textarea_id') }}{% endverbatim %}</pre>
     <div class="row">
       <div class="col-md-12">
         <table class="table table-responsive table-striped">
@@ -131,27 +131,27 @@
           <tbody>
             <tr>
               <td>Label</td>
-              <td>{{ input.label('Label', 'text_id') }}</td>
+              <td>{{ macro_input_label('Label', 'text_id') }}</td>
             </tr>
             <tr>
               <td>Text</td>
-              <td>{{ input.text('text', 'value', true, 'text_id') }}</td>
+              <td>{{ macro_input_text('text', 'value', true, 'text_id') }}</td>
             </tr>
             <tr>
               <td>Password</td>
-              <td>{{ input.password('password', true, 'password_id') }}</td>
+              <td>{{ macro_input_password('password', true, 'password_id') }}</td>
             </tr>
             <tr>
               <td>Email</td>
-              <td>{{ input.email('email', 'accounts@sumocoders.be', true, 'email_id') }}</td>
+              <td>{{ macro_input_email('email', 'accounts@sumocoders.be', true, 'email_id') }}</td>
             </tr>
             <tr>
               <td>Tel</td>
-              <td>{{ input.tel('tel', '093950251', true, 'tel_id') }}</td>
+              <td>{{ macro_input_tel('tel', '093950251', true, 'tel_id') }}</td>
             </tr>
             <tr>
               <td>Textarea</td>
-              <td>{{ input.textarea('textarea', 'Lorem ipsum dolor sit amet, consectetur adipisicing elit.', true, 'textarea_id') }}</td>
+              <td>{{ macro_input_textarea('textarea', 'Lorem ipsum dolor sit amet, consectetur adipisicing elit.', true, 'textarea_id') }}</td>
             </tr>
           </tbody>
         </table>
@@ -163,30 +163,30 @@
     <h1>Forms</h1>
 
     <h2>Login</h2>
-    <pre>{% verbatim %}{{ form.login() }}{% endverbatim %}</pre>
-    {{ form.login() }}
+    <pre>{% verbatim %}{{ macro_form_login() }}{% endverbatim %}</pre>
+    {{ macro_form_login() }}
 
     <h2>Register</h2>
-    <pre>{% verbatim %}{{ form.register() }}{% endverbatim %}</pre>
-    {{ form.register() }}
+    <pre>{% verbatim %}{{ macro_form_register() }}{% endverbatim %}</pre>
+    {{ macro_form_register() }}
 
     <h2>Search</h2>
-    <pre>{% verbatim %}{{ form.search('#', 'keyword', 'search', '&lt;i class="glyphicon glyphicon-search"&gt;&lt;/i&gt; Search') }}{% endverbatim %}</pre>
-    {{ form.search('#', 'keyword', 'search', '<i class="glyphicon glyphicon-search"></i> Search') }}
+    <pre>{% verbatim %}{{ macro_form_search('#', 'keyword', 'search', '&lt;i class="glyphicon glyphicon-search"&gt;&lt;/i&gt; Search') }}{% endverbatim %}</pre>
+    {{ macro_form_search('#', 'keyword', 'search', '<i class="glyphicon glyphicon-search"></i> Search') }}
   </section>
   <hr>
   <section class="article">
     <h1>Article</h1>
-    <pre>{% verbatim %}{{ article.article('http://lorempixel.com/400/200/?1', 'random image', 'Lorem ipsum dolor sit amet, consectetur adipisicing elit.', 'http://google.be') }}{% endverbatim %}</pre>
+    <pre>{% verbatim %}{{ macro_article_article('http://lorempixel.com/400/200/?1', 'random image', 'Lorem ipsum dolor sit amet, consectetur adipisicing elit.', 'http://google.be') }}{% endverbatim %}</pre>
     <div class="row">
       <div class="col-md-4">
-        {{ article.article('http://lorempixel.com/400/200/cats', 'random image', 'Lorem ipsum dolor sit amet, consectetur adipisicing elit.', 'http://google.be') }}
+        {{ macro_article_article('http://lorempixel.com/400/200/cats', 'random image', 'Lorem ipsum dolor sit amet, consectetur adipisicing elit.', 'http://google.be') }}
       </div>
       <div class="col-md-4">
-        {{ article.article('http://lorempixel.com/400/200/food', 'random image', 'Lorem ipsum dolor sit amet, consectetur adipisicing elit.', 'http://google.be') }}
+        {{ macro_article_article('http://lorempixel.com/400/200/food', 'random image', 'Lorem ipsum dolor sit amet, consectetur adipisicing elit.', 'http://google.be') }}
       </div>
       <div class="col-md-4">
-        {{ article.article('http://lorempixel.com/400/200//people', 'random image', 'Lorem ipsum dolor sit amet, consectetur adipisicing elit.', 'http://google.be') }}
+        {{macro_article_article('http://lorempixel.com/400/200//people', 'random image', 'Lorem ipsum dolor sit amet, consectetur adipisicing elit.', 'http://google.be') }}
       </div>
     </div>
   </section>
