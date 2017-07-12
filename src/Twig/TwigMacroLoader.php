@@ -57,9 +57,7 @@ EOT;
         try {
             $html = $env->createTemplate($twig)->render($context);
         } catch (Twig_Error $e) {
-            //$e->setTemplateFile(sprintf($twig->path. '/%s.twig', $name));
-
-            throw $e;
+            return "<div class='alert alert-warning'>Can't load $name.php.twig</div>";
         }
 
         return $html;
